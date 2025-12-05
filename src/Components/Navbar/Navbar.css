@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #d6eff4;
+  --text-color: #333;
+  --hover-color: #0056b3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.navbar .nav-items {
+  display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+
+.navbar .nav-items a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar .nav-items a:hover {
+  color: var(--primary-color);
+}
+
+.navbar .nav-items a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-items a:hover::after {
+  width: 100%;
+}
+
+.navbar .btns {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar .nav-items {
+    margin-left: 0;
+    gap: 1rem;
+    margin: 2px;
+  }
+
+  .navbar .nav-items a {
+    font-size: 0.9rem;
+  }
+
+  .navbar .btns {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .nav-items {
+    display: none;
+  }
+}

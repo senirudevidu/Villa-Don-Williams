@@ -1,0 +1,68 @@
+.booking-com-btn {
+  background-color: #003580;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.booking-com-btn:hover {
+  background-color: #002d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 53, 128, 0.3);
+}
+
+.booking-com-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 53, 128, 0.2);
+}
+
+.airbnb-btn {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.airbnb-btn:hover {
+  background-color: #e14348;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 90, 95, 0.3);
+}
+
+.airbnb-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 90, 95, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .booking-com-btn,
+  .airbnb-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-com-btn,
+  .airbnb-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
