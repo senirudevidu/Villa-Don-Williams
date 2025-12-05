@@ -1,0 +1,100 @@
+.review-card {
+  display: flex;
+  flex: 0 0 320px;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 123, 255, 0.2);
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #007bff);
+  border-radius: 16px 16px 0 0;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 18px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.card-title {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+  min-height: 80px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-content {
+  color: var(--secondary-color);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  text-align: justify;
+}
+
+.card-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 123, 255, 0.3);
+  border-radius: 2px;
+}
+
+.card-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 123, 255, 0.5);
+}
+
+.card-author {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 16px;
+  margin: 20px 0 4px 0;
+}
+
+.card-category-country {
+  font-style: italic;
+  color: var(--secondary-color);
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}

@@ -1,0 +1,217 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    var(--background-color) 0%,
+    rgba(248, 250, 252, 0.8) 100%
+  );
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 40px) 0 clamp(40px, 8vw, 60px) 0;
+}
+
+.review-title {
+  color: var(--text-color);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  margin: 0 0 60px 0;
+  line-height: 1.2;
+  max-width: 600px;
+  margin: 20px 0 0 40px;
+}
+
+.review-desc {
+  color: var(--secondary-color);
+  font-size: clamp(14px, 3.5vw, 18px);
+  line-height: 1.6;
+  padding: 0 0 0 40px;
+  margin: 12px 0 40px 0;
+}
+.review-cards-carousel {
+  display: flex;
+  gap: clamp(16px, 3vw, 24px);
+  padding: 0 clamp(16px, 4vw, 40px) clamp(16px, 3vw, 20px)
+    clamp(16px, 4vw, 40px);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.review-cards-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.review-cards-carousel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin: 0 40px;
+}
+
+.review-cards-carousel::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--primary-color), #007bff);
+  border-radius: 4px;
+}
+
+.review-cards-carousel::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #0056b3, var(--primary-color));
+}
+
+.review-card {
+  scroll-snap-align: start;
+}
+
+/* High-DPI display support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .review-card {
+    border-width: 0.5px;
+  }
+
+  .review-card::before {
+    height: 3px;
+  }
+}
+
+/* Improved touch interactions for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .review-card:hover {
+    transform: none;
+  }
+
+  .review-card:active {
+    transform: translateY(-4px) scale(0.98);
+    transition: all 0.1s ease;
+  }
+
+  .review-cards-carousel {
+    scroll-padding: 0 20px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .review {
+    padding: 32px 0 50px 0;
+  }
+
+  .review-cards-carousel {
+    padding: 0 30px 16px 30px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .review {
+    padding: 24px 0 40px 0;
+  }
+
+  .review-title {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .review-desc {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .review-cards-carousel {
+    padding: 0 24px 16px 24px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review {
+    padding: 20px 0 40px 0;
+    min-height: auto;
+  }
+
+  .review-title {
+    font-size: clamp(24px, 8vw, 36px);
+    margin: 0 0 10px 0;
+  }
+
+  .review-desc {
+    font-size: 15px;
+    margin: 0 auto 30px auto;
+    max-width: 400px;
+  }
+
+  .review-cards-carousel {
+    padding: 0 20px 16px 20px;
+    gap: 16px;
+  }
+
+  .review-cards-carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review {
+    padding: 16px 0 32px 0;
+  }
+
+  .review-title {
+    font-size: clamp(20px, 9vw, 28px);
+    margin: 0 0 8px 0;
+  }
+
+  .review-desc {
+    font-size: 14px;
+    margin: 0 auto 24px auto;
+    max-width: 320px;
+  }
+
+  .review-cards-carousel {
+    padding: 0 16px 12px 16px;
+    gap: 12px;
+  }
+
+  .review-cards-carousel::-webkit-scrollbar {
+    height: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .review {
+    padding: 12px 0 24px 0;
+  }
+
+  .review-title {
+    font-size: clamp(18px, 10vw, 24px);
+  }
+
+  .review-desc {
+    font-size: 13px;
+    margin: 0 auto 20px auto;
+    max-width: 280px;
+  }
+
+  .review-cards-carousel {
+    padding: 0 12px 10px 12px;
+    gap: 10px;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .review {
+    padding: 10px 0 20px 0;
+    min-height: auto;
+  }
+
+  .review-title {
+    font-size: clamp(20px, 4vh, 32px);
+    margin: 0 0 6px 0;
+  }
+
+  .review-desc {
+    font-size: 14px;
+    margin: 0 auto 16px auto;
+  }
+
+  .review-cards-carousel {
+    padding: 0 20px 8px 20px;
+  }
+}
