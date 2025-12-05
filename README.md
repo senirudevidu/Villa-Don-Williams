@@ -64,7 +64,8 @@ villaDW/
 
 ### Demo Video
 
-![Demo Video](./screenshots/Demo%20Video.mp4)
+
+https://github.com/user-attachments/assets/a6de92bb-c262-40fe-aac1-f7e9d09a90ff
 
 ### Hero Section
 
