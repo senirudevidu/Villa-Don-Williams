@@ -23,10 +23,9 @@ function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="logo">
-        <img src="./logo3.png" alt="logo" />
+        <p className="logo-text">Villa Don Williams</p>
       </div>
       <div className="nav-items">
-        <a href="#rooms">Rooms</a>
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact Us</a>
@@ -46,8 +45,23 @@ function Navbar() {
         </a>
       </div>
       <div className="btns">
-        <Button className="booking-com-btn" text="Booking.com" />
-        <Button className="airbnb-btn" text="Airbnb" />
+        <Button
+          className="booking-com-btn"
+          text="Booking.com"
+          onClick={() =>
+            window.open("https://www.booking.com/Share-YLIM4ob", "_blank")
+          }
+        />
+        <Button
+          className="airbnb-btn"
+          text="Airbnb"
+          onClick={() =>
+            window.open(
+              "https://www.airbnb.com/rooms/1546322398423397665?check_in=2026-01-29&check_out=2026-01-30&guests=1&adults=1&s=67&unique_share_id=79f4e870-9037-4275-a759-2464024c71ce",
+              "_blank"
+            )
+          }
+        />
       </div>
     </nav>
   );

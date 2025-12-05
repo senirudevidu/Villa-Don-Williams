@@ -9,7 +9,7 @@ const allImages = Object.values(images).map((img) => img.default);
 
 function VisualTour() {
   return (
-    <section className="visual-tour-section">
+    <section className="visual-tour-section" id="gallery">
       <h2 className="visual-tour-title">Visual Tour</h2>
       <p className="visual-tour-desc">See the place as guesrs experience it</p>
       <div className="gallery">

@@ -39,7 +39,7 @@
 .footer-designer {
   text-align: center;
   font-size: 0.7rem;
-  margin: 0 40px 0 0;
+  margin: 0 0 0 0;
 }
 .footer-designer {
   padding-bottom: 10px;
@@ -60,5 +60,24 @@
     padding: 0;
     margin: 0;
     width: 90%;
+  }
+
+  .footer-title {
+    font-size: clamp(24px, 6vw, 36px);
+    margin: 20px 0 10px 0;
+    text-align: center;
+  }
+  .footer-description {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 20px 0;
+  }
+}
+
+@media (max-width: 374px) {
+  .footer-copyright,
+  .footer-designer {
+    font-size: 0.6rem;
   }
 }

@@ -27,9 +27,33 @@ function Reviews() {
       category: "Solo Traveler",
       country: "Canada",
     },
+    {
+      title: "Unforgettable experience at Villa Don Williams",
+      content:
+        "From the moment we arrived, we were blown away by the beauty and tranquility of Villa Don Williams. The villa itself is stunning, with spacious rooms, modern amenities, and breathtaking views. The staff went above and beyond to ensure our stay was perfect, providing excellent service and delicious meals. We spent our days exploring the nearby attractions and relaxing by the pool. It was truly an unforgettable experience, and we can't wait to return!",
+      author: "Michael B.",
+      category: "Family",
+      country: "Australia",
+    },
+    {
+      title: "A slice of paradise at Villa Don Williams",
+      content:
+        "Villa Don Williams is a true gem. The villa is beautifully designed, with comfortable furnishings and all the amenities you could ask for. The staff were friendly and attentive, making us feel welcome from the moment we arrived. We spent our days lounging by the pool, exploring the local area, and enjoying delicious meals prepared by the villa's chef. It was a slice of paradise, and we can't wait to come back!",
+      author: "Sophia L.",
+      category: "Couple",
+      country: "United Kingdom",
+    },
+    {
+      title: "Relaxing and luxurious stay at Villa Don Williams",
+      content:
+        "We had a wonderful time at Villa Don Williams. The villa is spacious, clean, and beautifully decorated, with all the amenities you could need for a comfortable stay. The staff were friendly and attentive, making us feel right at home. We loved the peaceful surroundings and the stunning views. It was the perfect place to relax and unwind, and we would highly recommend it to anyone looking for a luxurious getaway.",
+      author: "Olivia M.",
+      category: "Family",
+      country: "New Zealand",
+    },
   ];
   return (
-    <section className="review" id="review">
+    <section className="review" id="reviews">
       <h1 className="review-title">Guest Voices</h1>
       <h5 className="review-desc">
         Travelers who stayed here share their thoughts

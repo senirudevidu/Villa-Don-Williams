@@ -11,7 +11,11 @@ function ContactComponent(props) {
         <h2 className="contact-title">{props.title}</h2>
         <p className="contact-content">{props.content}</p>
       </div>
-      <Button text={props.action} className={props.buttonClass} />
+      <Button
+        text={props.action}
+        className={props.buttonClass}
+        onClick={props.onClick}
+      />
     </div>
   );
 }
