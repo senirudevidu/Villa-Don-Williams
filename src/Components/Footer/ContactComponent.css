@@ -1,0 +1,20 @@
+.contact-component {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  gap: 10px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  margin: 0;
+}
+.contact-content {
+  margin: 0;
+  font-size: 1rem;
+}
