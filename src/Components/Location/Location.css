@@ -54,6 +54,10 @@
   padding: 0 20px;
 }
 
+.location-cards.show {
+  opacity: 1;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .location {

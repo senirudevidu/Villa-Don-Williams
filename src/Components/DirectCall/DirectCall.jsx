@@ -13,8 +13,18 @@ function DirectCall() {
             through our website or contacting us via phone.
           </p>
           <div className="direct-call-buttons">
-            <Button className="direct-booking-btn" text="Book Now" />
-            <Button className="contact-us-btn" text="Call" />
+            <Button
+              className="direct-booking-btn"
+              text="Book Now"
+              onClick={() =>
+                window.open("https://www.booking.com/Share-YLIM4ob", "_blank")
+              }
+            />
+            <Button
+              className="contact-us-btn"
+              text="Call"
+              onClick={() => window.open("tel:+947022222676")}
+            />
           </div>
         </div>
 

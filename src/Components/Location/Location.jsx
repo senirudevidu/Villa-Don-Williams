@@ -3,7 +3,32 @@ import LocationCard from "./LocationCard.jsx";
 import { GiRiver } from "react-icons/gi";
 import { MdOutlineKitchen } from "react-icons/md";
 import { TbBeach, TbCar, TbBed, TbUsers } from "react-icons/tb";
+import { useEffect } from "react";
+
 function Location() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    const cardElements = document.querySelectorAll(".location-card");
+    cardElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      cardElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <section className="location" id="location">
       <h5>Location</h5>
