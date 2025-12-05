@@ -6,8 +6,8 @@
     var(--background-color) 0%,
     rgba(248, 250, 252, 0.8) 100%
   );
-  min-height: 100vh;
-  padding: clamp(20px, 5vw, 40px) 0 clamp(40px, 8vw, 60px) 0;
+  min-height: 70vh;
+  padding: 40px;
 }
 
 .review-title {
