@@ -3,6 +3,7 @@ import Hero from "./Components/Hero/Hero.jsx";
 import Location from "./Components/Location/Location.jsx";
 import Reviews from "./Components/Reviews/Reviews.jsx";
 import VisualTour from "./Components/VisualTour/VisualTour.jsx";
+import DirectCall from "./Components/DirectCall/DirectCall.jsx";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Location />
       <Reviews />
       <VisualTour />
+      <DirectCall />
     </>
   );
 }
