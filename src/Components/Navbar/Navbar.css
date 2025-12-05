@@ -165,8 +165,8 @@
   }
 
   .navbar .btns {
-    gap: 0.3rem;
-    flex-direction: column;
+    gap: 0.6rem;
+    flex-direction: row;
   }
 
   .navbar .logo img {

@@ -31,9 +31,6 @@ function Navbar() {
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact Us</a>
       </div>
-      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-        ☰
-      </button>
       <div className={`nav-items mobile ${isMobileMenuOpen ? "open" : ""}`}>
         <a href="#rooms" onClick={() => setIsMobileMenuOpen(false)}>
           Rooms
