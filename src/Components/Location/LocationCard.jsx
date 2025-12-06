@@ -1,3 +1,5 @@
+import "./LocationCard.css";
+
 function LocationCard(props) {
   const Icon = props.icon;
   return (
