@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="logo">
-        <p className="logo-text">Villa Don Williams</p>
+        <p className="logo-text">VDW</p>
       </div>
       <div className="nav-items">
         <a href="#gallery">Gallery</a>

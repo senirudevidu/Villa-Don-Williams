@@ -63,6 +63,7 @@
   overflow-x: hidden;
   padding-right: 8px;
   text-align: justify;
+  max-height: 330px;
 }
 
 .card-content::-webkit-scrollbar {
@@ -88,7 +89,7 @@
   font-weight: 600;
   color: var(--primary-color);
   font-size: 16px;
-  margin: 20px 0 4px 0;
+  margin: 0;
 }
 
 .card-category-country {
@@ -97,4 +98,122 @@
   margin: 0;
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .review-card {
+    flex: 0 0 280px;
+    padding: 25px;
+    height: 500px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    min-height: 70px;
+  }
+
+  .card-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    flex: 0 0 260px;
+    padding: 20px;
+    height: 480px;
+  }
+
+  .stars {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    min-height: 60px;
+    margin-bottom: 12px;
+  }
+
+  .card-content {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .card-author {
+    font-size: 15px;
+  }
+
+  .card-category-country {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    flex: 0 0 280px;
+    padding: 20px;
+    height: 450px;
+    margin: 0 10px;
+  }
+
+  .stars {
+    font-size: 15px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    min-height: 50px;
+  }
+
+  .card-content {
+    font-size: 13px;
+    line-height: 1.5;
+    max-height: 280px;
+  }
+
+  .card-author {
+    font-size: 14px;
+  }
+
+  .card-category-country {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .review-card {
+    flex: 0 0 240px;
+    padding: 16px;
+    height: 420px;
+    margin: 0 8px;
+  }
+
+  .stars {
+    font-size: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .card-title {
+    font-size: 15px;
+    min-height: 45px;
+    margin-bottom: 10px;
+  }
+
+  .card-content {
+    font-size: 12px;
+    line-height: 1.4;
+    max-height: 280px;
+  }
+
+  .card-author {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+
+  .card-category-country {
+    font-size: 11px;
+  }
 }

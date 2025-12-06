@@ -1,19 +1,25 @@
 .booking-com-btn {
-  background-color: #003580;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 9px 24px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 48px;
+  line-height: 1;
 }
 
 .booking-com-btn:hover {
-  background-color: #002d6b;
+  background-color: #003580;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 53, 128, 0.3);
 }
@@ -24,21 +30,28 @@
 }
 
 .airbnb-btn {
-  background-color: #ff5a5f;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  background-color: transparent;
+  color: #ff5a5f;
+  padding: 9px 24px;
+  border: 2px solid #ff5a5f;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 48px;
+  line-height: 1;
 }
 
 .airbnb-btn:hover {
-  background-color: #e14348;
+  background-color: #ff5a5f;
+  border: 2px solid #ffffff;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(255, 90, 95, 0.3);
 }
@@ -63,6 +76,8 @@
 }
 
 .contact-us-btn {
+  background-color: transparent;
+  color: var(--primary-color);
   padding: 12px 24px;
   border: 2px solid var(--primary-color);
   border-radius: 6px;
@@ -80,8 +95,10 @@
   .airbnb-btn,
   .contact-us-btn,
   .direct-booking-btn {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 6px 14px;
+    font-size: 13px;
+    min-width: 100px;
+    height: 36px;
   }
 }
 
@@ -90,10 +107,27 @@
   .airbnb-btn,
   .contact-us-btn,
   .direct-booking-btn {
-    padding: 6px 12px;
+    font-size: 0.5rem;
+    padding: 1px 4px;
     font-size: 12px;
     width: 100%;
     margin: 5px 0;
+    height: 27px;
+    min-width: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .booking-com-btn,
+  .airbnb-btn,
+  .contact-us-btn,
+  .direct-booking-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+    width: 100%;
+    margin: 3px 0;
+    height: 32px;
+    min-width: auto;
   }
 }
 
@@ -131,6 +165,7 @@
   text-decoration-color: transparent;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.6s ease;
+  width: fit-content;
 }
 .location-btn:hover,
 .callnow-btn:hover {
