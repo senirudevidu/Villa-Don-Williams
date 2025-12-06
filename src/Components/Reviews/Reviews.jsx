@@ -1,7 +1,35 @@
+import { useEffect, useRef, useState } from "react";
 import ReviewCard from "./ReviewCard.jsx";
 import "./Reviews.css";
 
 function Reviews() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const reviewData = [
     {
       title: "Best stay ever !!! Can’t recommend more",
@@ -53,7 +81,7 @@ function Reviews() {
     },
   ];
   return (
-    <section className="review" id="reviews">
+    <section className="review" id="reviews" ref={sectionRef}>
       <h1 className="review-title">Guest Voices</h1>
       <h5 className="review-desc">
         Travelers who stayed here share their thoughts
@@ -67,6 +95,8 @@ function Reviews() {
             author={review.author}
             category={review.category}
             country={review.country}
+            isVisible={isVisible}
+            index={index}
           />
         ))}
       </div>
